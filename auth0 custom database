@@ -1,0 +1,70 @@
+
+
+
+Login code of mongodb
+---------------------
+
+function login(email, password, callback) {
+  const bcrypt = require('bcrypt');
+  const MongoClient = require('mongodb@3.1.4').MongoClient;
+  const client = new MongoClient('mongodb://'+configuration.email+':'+configuration.password+'@elastic-si-mdb-test-shard-00-00.hvgar.mongodb.net:27017,elastic-si-mdb-test-shard-00-01.hvgar.mongodb.net:27017,elastic-si-mdb-test-shard-00-02.hvgar.mongodb.net:27017?ssl=true&replicaSet=atlas-lo8ysv-shard-0&authSource=admin&retryWrites=true&w=majority ');
+
+  client.connect(function (err) {
+    if (err) return callback(err);
+
+    const db = client.db('esi-dev-search-admin-db');
+    const users = db.collection('users');
+
+    users.findOne({ email: email }, function (err, user) {
+      if (err || !user) {
+        client.close();
+        return callback(err || new WrongUsernameOrPasswordError(email));
+      }
+
+      bcrypt.compare(password, user.password, function (err, isValid) {
+        client.close();
+
+        if (err || !isValid) return callback(err || new WrongUsernameOrPasswordError(email));
+
+        return callback(null, {
+            user_id: user._id.toString(),
+            nickname: user.nickname,
+            email: user.email
+          });
+      });
+    });
+  });
+}
+
+Get user of mongodb
+-------------------
+function getByEmail(email, callback) {
+  const MongoClient = require('mongodb@3.1.4').MongoClient;
+  const client = new MongoClient('mongodb://elastic-si-mdb:fQLRb9aFTy1XmPCq@elastic-si-mdb-test-shard-00-00.hvgar.mongodb.net:27017,elastic-si-mdb-test-shard-00-01.hvgar.mongodb.net:27017,elastic-si-mdb-test-shard-00-02.hvgar.mongodb.net:27017?ssl=true&replicaSet=atlas-lo8ysv-shard-0&authSource=admin&retryWrites=true&w=majority ');
+
+  client.connect(function (err) {
+    if (err) return callback(err);
+
+    const db = client.db('esi-dev-search-admin-db');
+    const users = db.collection('users');
+
+    users.findOne({ email: email }, function (err, user) {
+      client.close();
+
+      if (err) return callback(err);
+      if (!user) return callback(null, null);
+	
+      return callback(null, {
+        _id:user._id,
+        uuid:user.uuid,
+        firstName: user.firstName,
+        lastName:user.lastName,
+        email: user.email,
+	isAdmin:user.isAdmin,
+        status:user.status
+      });
+    });
+  });
+}
+
+	

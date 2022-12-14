@@ -1,0 +1,18 @@
+git init
+
+git config --global user.email "pradip.inexture@gmail.com"
+git config --global user.name "pradipinexture"
+git remote add origin https://github.com/pradipinexture/pradipinexture.git
+
+status git
+
+git add *
+
+git checkout -b springsecurity
+
+git commit -m "This is spring security"
+
+git push -u origin springsecurity
+
+Personal Access Token : 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
+

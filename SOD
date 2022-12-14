@@ -1,0 +1,1414 @@
+SOD of 20-04-2022
+
+Project: Spring Training.
+	- AbstractApplicationContext. 
+	- Working on remaining topics.
+	- Stack Program.
+	EST : 9:30 Hours	
+	
+	
+	
+	
+SOD of 22-04-2022
+
+Project: Spring hibernate Training.
+	- Embedding objects.
+	- one to one
+	- one to many
+	- many to many 
+	- Fetch type
+	- Object states
+	- HQL 
+	EST : 9:30 Hours	
+	
+	
+	
+SOD of 25-04-2022
+
+Project: Spring hibernate Training.
+	- Working on HQL.
+	- Start Working on :
+		HCQL
+		
+	EST : 9:30 Hours	
+	
+	
+	
+	
+SOD of 26-04-2022
+
+Project: Spring hibernate Training.
+	- Start Working on :
+		- hibernate using xml.
+		- Collection mapping.
+		- And other lefted part.
+		- Basic crud operation using hibernate.
+		
+	EST : 9:30 Hours	
+	
+
+		
+SOD of 28-04-2022
+
+Project: Spring MVC Training.
+	- Start Working on SPring MVC.
+	EST : 9:30 Hours	
+	
+
+
+SOD of 29-04-2022
+
+Project: Spring MVC Training.
+	- Start Working on :
+		- Data sending view to controller.
+		- HTML form using spring MVC.
+		- @RequestMa- pping and @RequestParam.
+		- @ModelAttribute.
+		- 
+		
+	EST : 9:30 Hours
+
+
+
+
+
+
+
+
+SOD of 02-05-2022
+
+Project: Spring MVC Training.
+	- Start Working on :
+		- File Uploading
+		- BindingResult
+		- @ExceptionHandler 
+		- Lefted part of spring mvc 
+		- Explore FreeMarker template
+		
+	EST : 9:30 Hours
+
+
+
+
+
+SOD of 03-05-2022
+
+Project: Spring Training.
+	- Exploring FreeMarker template.
+	- Start working on JSPServletTask to SpringTask
+		
+	EST : 9:30 Hours
+
+
+
+
+
+SOD of 04-05-2022
+
+Project: Spring Training.
+	- Exploring FreeMarker template.
+	- Convert jsp to ftl pages in JSPServletTask UI
+		
+	EST : 9:30 Hours
+
+
+
+
+
+SOD of 05-05-2022
+
+Project: Spring Training.
+	- Exploring FreeMarker template.
+	- Remove XML files and use annotation.
+	- Remove hibernate configuration file and use another way.
+	- Make ftl pages for UI design.
+		
+	EST : 9:30 Hours
+
+
+
+
+
+
+SOD of 06-05-2022
+
+Project: Spring Training.
+	- Make ftl pages for UI design.
+		
+	EST : 9:30 Hours
+
+
+
+SOD of 09-05-2022
+
+Project: Spring Training.
+	- Manage User and Address Bean.
+	- Write logic in ftl pages.
+	- On Submit data store in db.
+	- Edit Profile on Register page.
+	
+	EST : 9:30 Hours
+
+
+
+
+SOD of 10-05-2022
+
+Project: Spring Project.
+	- Manage Address and Role Bean.
+	- Edit page.
+	- Manage address in edit page.
+	- Manage sesssion.
+	EST : 9:00 Hours
+
+
+
+
+SOD of 11-05-2022
+
+Project: Spring Project.
+	- User edit data save in db.
+	- Manage address in edit page.
+	- Manage sesssion.
+	- Include header and footer page.
+	- Use filter for prevent back button.
+	- Image print in Editpage and ProfilePage.
+	EST : 9:30 Hours
+
+
+
+		
+SOD of 16-05-2022
+
+Project: Spring Boot Project.
+	- Spring boot documentation reading.
+	- Springmvc project convert into spring boot.
+	
+	EST : 9:30 Hours
+
+
+
+
+SOD of 17-05-2022
+
+Project: Spring Boot Project.
+	- Spring boot documentation reading.
+	- Springmvc project convert into spring boot.
+	
+	EST : 9:30 Hours
+	
+	
+	
+	
+	
+
+SOD of 18-05-2022
+
+Project: Spring Boot Project.
+	- Working On :
+		- Springmvc project convert into spring boot.
+	
+	EST : 9:30 Hours	
+	
+	
+	
+	
+
+SOD of 20-05-2022
+
+Project: Spring Boot Project.
+	- Read documentation of postman API.
+	- Postman implement in spring boot project.
+	
+	EST : 9:30 Hours	
+	
+	
+	
+	
+	
+
+SOD of 23-05-2022
+
+Project: Spring Boot Project.
+	- Writting testcases on springboot project.
+		- service layer testcases.
+		- controller layer testcases.
+	EST : 9:30 Hours	
+	
+	
+	
+
+	
+	
+
+SOD of 27-05-2022
+
+Project: Spring Security
+
+	- Working on spring security.
+	- Start working on JWT tocken protocol
+	 
+	EST : 9:30 Hours	
+	
+
+
+
+
+
+SOD of 30-05-2022
+
+Project: Spring Security
+
+	- Start working on :
+		JWT tocken protocol.
+		oauth2 protocol.
+	 
+	EST : 9:30 Hours	
+	
+	
+
+
+SOD of 31-05-2022
+
+Project: Spring Security
+	- Working on oauth2 protocol. 
+	- Start working on :
+		- google SSO login.
+		
+	EST : 9:30 Hours	
+	
+	
+
+	
+
+
+
+SOD of 01-06-2022
+
+Project: Spring Security
+	- Working on Linux task.
+	- Working on oauth2 protocol. 
+	- Start working on :
+		- google SSO login.
+		
+	EST : 9:30 Hours	
+	
+
+
+
+SOD of 02-06-2022
+
+Project: Spring Security
+	- Working on oauth2 protocol. 
+	- Start working on custom JWT token.
+		
+	EST : 9:30 Hours	
+	
+
+
+
+
+SOD of 03-06-2022
+
+Project: Spring Security 
+
+	- Working on custom JWT token.
+		
+	EST : 9:30 Hours	
+
+
+
+
+
+SOD of 06-06-2022
+
+Project: Spring Cloud 
+
+	- Start Working on spring cloud.
+		
+	EST : 9:30 Hours	
+
+
+
+
+
+
+SOD of 07-06-2022
+
+Project: Spring Cloud and microservices 
+
+	- Working on spring cloud.
+	- Working on microservices.
+		
+	EST : 9:30 Hours	
+
+
+
+
+
+
+SOD of 08-06-2022
+
+Project: Microservices Training
+
+	- Working on microservices.
+		
+	EST : 9:30 Hours	
+
+
+SOD of 09-06-2022
+
+Project: Microservices Training
+
+	- Start working on :
+		- spring cloud config server
+		- Zipkin server
+		
+	EST : 9:30 Hours	
+	
+	
+	
+	
+	
+SOD of 13-06-2022
+
+Project: Microservices Training
+
+	- Start working on :
+	
+		- Parthsir's questions.
+			
+	EST : 9:30 Hours	
+		
+		
+		
+		
+	
+SOD of 14-06-2022
+
+Project: Microservices Training
+
+	- Working on :
+	
+		- Parthsir's questions.
+			
+	EST : 9:30 Hours
+	
+	
+	
+SOD of 15-06-2022
+
+Project: Microservices Training
+
+	- Exploring Amberflo.
+			
+	EST : 9:30 Hours
+	
+	
+	
+	
+SOD of 15-06-2022
+
+Project: Amazon S3
+
+	- Start working on Amazon S3.
+	- and implements in amberflo codebase.
+			
+	EST : 9:30 Hours
+	
+	
+	
+	
+	
+	
+SOD of 20-06-2022
+
+Project: Amberflo
+
+	- Working on amberflo.
+			
+	EST : 9:30 Hours
+	
+
+
+
+
+
+SOD of 30-08-2022
+-----------------
+Project: Elastic SI
+	
+E20-864 : Amberflo - Add instanceId as dimensionId in deployment meter	
+
+EST : 8 Hours
+
+
+SOD of 31-08-2022
+-----------------
+Project: Elastic SI
+	
+E20-867 : Search Admin API testing 	
+
+EST : 8 Hours
+
+
+
+
+SOD of 01-09-2022
+-----------------
+Project: Elastic SI
+	
+E20-867 : Search Admin API testing 	
+	- Testing APIs priority wise that listed yesterday.
+	- And body and response add into doc.  
+	- Module are :
+		User Management
+		Query Optimization
+		List Management
+		Usecase
+		Connection 
+EST : 8 Hours
+
+
+
+
+SOD of 02-09-2022
+-----------------
+Project: Elastic SI
+	
+E20-832 :
+	- Documentation - Update API document from 2.0.35
+
+
+SOD of 05-09-2022
+-----------------
+Project: Elastic SI
+	
+E20-832 :
+	- Documentation - Update API document from 2.0.35
+	- 16 APIs are in smart-search-api for updating documents
+
+
+
+
+SOD of 06-09-2022
+-----------------
+Project: Elastic SI
+	
+E20-832 :
+	- Working on project and usecase module for updating APIs in documents.
+	- Create collection for smart-search-api service.
+
+
+
+
+SOD of 07-09-2022
+-----------------
+Project: Elastic SI
+	
+E20-832 :
+	- Verify with priynkamam.
+	
+E20-843, DEV - Wrong name is displayed on the Last Modified by
+	- Verify that this bug replicate in QA and dev or not.
+	
+	
+SOD of 09-09-2022
+-----------------
+Project: Elastic SI
+	
+E20-867 : Search admin document updating.
+	- Changing document as per client requirement.
+	
+	
+SOD of 12-09-2022
+-----------------
+Project: Elastic SI
+	
+E20-903 : ElasticSI Amberflo Meter : Add Name In EventId Dimension
+	
+		
+	
+SOD of 13-09-2022
+-----------------
+Project: Elastic SI
+	
+E20-828 : Documentation - ElasticSI Amberflo Integration API Document
+	- Latest API changes update in document.
+	
+	
+SOD of 14-09-2022
+-----------------
+Project: Elastic SI
+	
+E20-903 :
+ -Working on whenever project, usecase,connection, query and curation module's name change at a time related meter will stop and restart with new name.	
+	
+
+SOD of 15-09-2022
+-----------------
+Project: Elastic SI
+	
+E20-903 :
+ - Code verify with hepi sir and generate PR for merging code into develpment-phase1-reskin
+ - Test changes in dev environment.
+
+E20- :
+ - Enable security in amberflo microservice.  
+
+
+SOD of 16-09-2022
+-----------------
+Project: Elastic SI
+	
+E20-933 :
+ - Development done waiting for E20-934
+
+E20-937 :
+ - Write testcase.  
+ 
+ 
+ 
+
+SOD of 19-09-2022
+-----------------
+Project: Elastic SI
+	
+E20-937 :
+ - Writing Junit testcases of search-admin.
+
+
+
+SOD of 22-09-2022
+-----------------
+Project: Elastic SI
+	
+E20-937  :
+ - Writing  testcases on UserController of search-admin microservice.
+
+
+
+SOD of 23-09-2022
+-----------------
+Project: Elastic SI
+	
+E20-903 : Integration of AmberFlo
+ - Add a global amberflo enable/disable switch in search-admin and smart-search-api.
+
+
+
+
+
+SOD of 26-09-2022
+-----------------
+Project: Elastic SI
+	
+E20-952 : Add a global amberflo enable/disable switch in search-admin and smart-search-api.
+	- Take pull of E20-949 and apply global switch logic.
+
+
+SOD of 27-09-2022
+-----------------
+Project: Elastic SI
+	
+E20-952 : Add a global amberflo enable/disable switch in search-admin and smart-search-api.
+	- Need to check in dev server.
+
+
+
+SOD of 28-09-2022
+-----------------
+Project: Elastic SI
+
+Need to test below tickets in dev.
+	E20-933 : Enable Security In Amberflo
+	E20-952 : Add a global amberflo enable/disable switch in search-admin and smart-search-api.	
+
+
+SOD of 03-10-2022
+-----------------
+Project: Elastic SI
+
+E20-959 : Add key in License for Search UI
+
+
+
+SOD of 04-10-2022
+-----------------
+
+Learning ILM policy.
+Make PPT and demo 
+
+
+
+SOD of 07-10-2022
+-----------------
+
+- Making demo of ILM policy. 
+
+
+
+
+SOD of 10-10-2022
+-----------------
+
+- Exploring Elastic Search.
+
+- Making demo of ILM policy. 
+
+
+SOD of 11-10-2022
+-----------------
+Project: Java Delivery
+
+- Exploring ILM related part of elastic search.
+- Changing PPT part that discussed.
+- Exploring elastic search.
+
+
+SOD of 12-10-2022
+-----------------
+Project: Java Delivery
+
+- Exploring elastic search.
+- Exploring ILM related part of elastic search.
+- Give hiring test in HackerRank.
+
+
+SOD of 13-10-2022
+-----------------
+Project: Java Delivery
+
+- Exploring elastic search.
+- Exploring ILM related part on kibana of elastic search.
+- Give ilm demo to parthsir.
+
+
+
+
+
+SOD of 14-10-2022
+-----------------
+Project: Java Delivery
+
+- Exploring ILM related part on kibana of elastic search.
+- Give ilm demo at 4:30 to java team.
+
+Project: Elastic SI
+
+- Help Elatic SI team on Auth0 R&D part.
+
+
+
+
+SOD of 20-10-2022
+-----------------
+Project: Elastic SI
+
+- Testing Query Optimization module.
+
+
+
+SOD of 21-10-2022
+-----------------
+Project: Java Delivery
+
+- Exploring Elastic Search.
+
+
+
+EOD of 03-11-2022
+-----------------
+Project: Java Delivery
+
+- Exploring Keycloak documentation.
+- Made keyclaok demo with two microservice.
+- Private client feature implemented 
+- Implemented SSO with keycloak.(google, github and facebook)
+
+
+SOD of 04-11-2022
+-----------------
+Project: Java Delivery
+
+- Exploring extra features of keycloak.
+- Make demo for Keycloak with custom database.
+- Make demo for production mode.
+	- Configure HHTPs using certificate.
+	- Configure hostname.
+
+
+
+
+SOD of 04-11-2022
+-----------------
+Project: Java Delivery
+
+- Exploring extra features of keycloak.
+- Make demo for Keycloak with custom database.
+- Make demo for production mode.
+	- Configure HHTPs using certificate.
+	- Configure hostname.
+
+
+
+
+
+
+SOD of 07-11-2022
+-----------------
+Project: Java Delivery
+
+- Exploring keycloak.
+- Working on keycloak demo on production mode.
+- Start working on document for keycloak. 
+
+
+
+
+
+
+SOD of 08-11-2022
+-----------------
+Project: Java Delivery
+
+- Exploring keycloak UI.
+- Working on 
+    - document for keycloak.
+    - Keycloak demo on production mode.
+    	- configure https using java keystore and truststore.
+ 
+
+
+SOD of 09-11-2022
+-----------------
+Project: Java Delivery
+
+- Exploring keycloak.
+- Working on 
+    - document for keycloak.
+    - Getting SSL certificate via two way and make doc.
+	 - online
+	 - self signed certificate by command line.
+- Create user in keycloak by microservice.
+	
+	
+	
+SOD of 10-11-2022
+-----------------
+Project: Java Delivery
+
+- Exploring keycloak.
+- Working on 
+    - Getting SSL certificate using online plateforms.
+    - Create user in keycloak by microservice.	
+- Start making documents for HTTPs.
+
+
+
+EOD of 10-11-2022
+-----------------
+Project: Java Delivery
+
+- Helped Elastic SI team for Junit testcases setup.
+- Working on 
+    - Getting SSL certificate using online plateforms.
+- Adding content in documents for HTTPs.
+
+
+
+
+
+
+SOD of 11-11-2022
+-----------------
+Project: Java Delivery
+ 
+- Getting SSL certificates using online platforms.
+- Creating a user in keycloak by microservice.    
+- Adding content in HTTPS documents.
+
+
+
+
+
+
+EOD of 11-11-2022
+-----------------
+Project: Java Delivery
+
+- Made HTTPS document and Gave demo to java team. 
+- Creating a user in keycloak by microservice.  
+
+
+
+
+
+
+
+
+
+SOD of 14-11-2022
+-----------------
+Project: Java Delivery
+
+- Exploring keycloak UI and documentation.
+- Working on Keycloak microservice.
+    - Create UI for getting user data.
+    - Make API that create user in keycloak.
+
+
+EOD of 14-11-2022
+-----------------
+Project: Java Delivery
+
+- Exploring keycloak UI and documentation.
+- Worked on Keycloak microservice that create user in Keycloak.
+
+
+
+
+SOD of 15-11-2022
+-----------------
+Project: Java Delivery
+
+- Exploring keycloak UI and documentation.
+- Add keycloak with spring boot application configuration in doc.
+- Start Working on user's scope management with two application like federated SSO.
+
+
+EOD of 15-11-2022
+-----------------
+Project: Java Delivery
+
+- Exploring Keycloak.
+- Created two microservice.
+- UI side and backend APIs added.
+- Roles related part added in first application.  
+
+
+
+SOD of 16-11-2022
+-----------------
+Project: Java Delivery
+
+- Exploring keycloak UI and documentation.
+- Add keycloak with spring boot application configuration in doc.
+- Working on user's scope management with two application like federated SSO.
+
+ 
+EOD of 16-11-2022
+-----------------
+Project: Java Delivery
+
+- Below cotent added in Keycloak doc.
+    - developement mode
+    - production mode
+    - Keycloak with spring boot application
+    
+- Worked on user's Role management with two application and pushed code into git.
+
+- Doc uploaded in Java team folder.
+   - Keycloak doc : https://docs.google.com/document/d/1p2CvWO3SW7n-37SEJqIbeyJVK1A0KTcUWoab8lXmpcY/edit?usp=share_link 
+   - HTTPs doc : https://docs.google.com/document/d/1p2CvWO3SW7n-37SEJqIbeyJVK1A0KTcUWoab8lXmpcY/edit?usp=share_link
+
+
+
+SOD of 17-11-2022
+-----------------
+Project: Java Delivery
+
+- Exploring keycloak UI and documentation.
+- Adding extra functionaly in Role management applications like 
+   - Using Thymeleaf show logged in user data 
+
+
+
+
+EOD of 17-11-2022
+-----------------
+Project: Java Delivery
+
+- Exploring keycloak Custom theme section.
+- Added extra functionaly in Role management applications and code pushed in git
+   - Using Thymeleaf show logged in user data like ID and access token data 
+
+
+
+SOD of 18-11-2022
+-----------------
+Project: Java Delivery
+
+- Exploring keycloak.
+    - Theme types.
+    - Configure custom theme for client login page. 
+
+
+
+EOD of 18-11-2022
+-----------------
+Project: Java Delivery
+
+- Explored keycloak theme types.
+- Configured custom theme for client login page and also for whole realm. 
+
+EST : 8:00 Hours
+
+
+
+
+
+SOD of 21-11-2022
+-----------------
+Project: Java Delivery
+
+- Exploring Keycloak.
+- Understanding new task requirements.
+- Start working on get all roles and assign multiple roles to user.
+
+
+
+EOD of 21-11-2022
+-----------------
+Project: Java Delivery
+
+- Exploring Keycloak.
+- Working on Realm-management microservice.
+- Resolving error of client that accur while i calling keycloak's SDK methods.
+
+
+
+
+SOD of 22-11-2022
+-----------------
+Project: Java Delivery
+
+- Exploring Keycloak.
+- Upadating keycloak document
+   - Add keycloak with spring boot aplication.
+- Working on Multi-Realm-management microservice
+   - Create UI that Take require parameter for realm creation.
+   - Make API that create realm in keycloak.
+
+
+EOD of 22-11-2022
+-----------------
+Project: Java Delivery
+
+- Client error resolved.
+- Working on backend part of realm-management microservice.
+- Exploring Keycloak.
+- Exploring multi-tenant architecture
+
+EST : 8:30 Hours
+
+
+
+
+
+
+SOD of 23-11-2022
+-----------------
+Project: Java Delivery
+
+- Exploring Keycloak.
+- Updating keycloak doc.
+- Working on realm-management microservice.
+- Exploring multi-tenant architecture
+
+
+
+EOD of 23-11-2022
+-----------------
+Project: Java Delivery
+
+- Exploring Keycloak.
+- Worked on realm-management microservice.
+- Exploring multi-tenant architecture and finding way for implement it in project.
+
+
+
+
+
+
+SOD of 24-11-2022
+-----------------
+Project: Java Delivery
+
+- Exploring Keycloak.
+- Updating keycloak doc.
+- Working on user-management microservice.
+- Exploring multi-tenant architecture and finding ways to implement it in a project.
+
+
+
+
+
+EOD of 24-11-2022
+-----------------
+Project: Java Delivery
+
+- Worked below part in realm-management and user-management
+    - UI improved using bootstrap.
+    - Error message added. 
+    - Keycloak configured.
+- Exploring multi-tenant architecture and finding ways to implement it in a project.
+
+EST : 8:00 Hours 
+
+
+
+
+
+
+
+SOD of 25-11-2022
+-----------------
+Project: Java Delivery
+
+- Exploring Keycloak.
+- Updating keycloak doc.
+- Exploring multi-tenant architecture and finding ways to implement it in a project.
+
+
+
+
+
+
+EOD of 25-11-2022
+-----------------
+Project: Java Delivery
+
+- Exploring Keycloak.
+- Made simple demo of multi-tenancy using JSON file.
+
+
+
+
+
+
+
+SOD of 28-11-2022
+-----------------
+Project: Java Delivery
+
+- Exploring Keycloak.
+- Updating keycloak doc.
+- Implementing multi-tenant in user-microservice.
+
+
+
+EOD of 28-11-2022
+-----------------
+Project: Java Delivery
+
+- Exploring Keycloak.
+- Resolved logoout redirection problem.
+- Implemented multi-tenant in user-microservice.
+
+EST : 8:30 Hours
+
+
+
+
+
+SOD of 29-11-2022
+-----------------
+Project: Java Delivery
+
+- Updating keycloak doc.
+- Planning for keycloak demo.
+- Finding other way to implement multi-tenant instead of JSON.
+
+
+
+
+EOD of 29-11-2022
+-----------------
+Project: Java Delivery
+
+- Updating keycloak doc.
+    - Added table of content.
+    - Added Identity Provider topic.
+- Planned keycloak demo part and updated doc accordingly.
+
+EST : 8:20 Hours
+
+
+
+
+
+
+
+SOD of 30-11-2022
+-----------------
+Project: Java Delivery
+
+- Updating keycloak doc.
+    - Add Custom Theme topic. 	
+- Finding other way to implement multi-tenant instead of JSON.
+
+
+
+EOD of 30-11-2022
+-----------------
+Project: Java Delivery
+
+- Updated below topic in keycloak doc.
+    - Add Custom Theme topic.
+    - Formatted the doc 	
+- Working on multi-tenant project using database.
+
+EST : 8:30 Hours
+
+
+
+SOD of 01-11-2022
+-----------------
+Project: Java Delivery
+
+- Updating keycloak doc.
+- Working on multi-tenant project using database.
+
+
+
+
+EOD of 01-12-2022
+-----------------
+Project: Java Delivery
+
+- Worked on 
+    - multi-tenanct project using database.
+    - Realm-management project and added below features
+        - when new realm created at a time 
+        	- user-management client will add in realm.
+        	- deafult user will create
+        	- Roles will assign to user. 
+        	- KeycloakDeployment will add in database. 
+
+EST : 9:00 Hours
+
+
+
+
+SOD of 02-12-2022
+-----------------
+Project: Java Delivery
+
+- Updating keycloak doc.
+- Addding extra features in multi-tenant project.
+- Create demo videoes for keycloak.
+
+
+
+
+
+EOD of 02-12-2022
+-----------------
+Project: Java Delivery
+
+- Updating keycloak doc.
+- Worked on 
+    - Realm-management project and added below features
+        - Dynamic redirection logic added.
+        - Validation added for master realm.
+    - User-microservice added and implemented multi-tenanct feature.
+
+EST : 8:20 Hours
+
+
+
+
+
+
+
+
+SOD of 05-12-2022
+-----------------
+Project: Java Delivery
+
+- Updating keycloak doc.
+- Create demo videoes for keycloak.
+
+
+
+
+
+
+EOD of 05-12-2022
+-----------------
+Project: Java Delivery
+
+- Updating keycloak doc.
+- Created github repository.
+- Added below content  in git repo and also added readme file in each project.
+	- keyclok server in developer mode with no config.
+	- keyclaok server wih production mode with advance config.
+	- user role base access
+	- application wise different roles of users
+	- multi-tenant task
+
+EST : 8:00 Hours
+
+
+
+
+SOD of 06-12-2022
+-----------------
+Project: Java Delivery
+
+- Updating keycloak doc.
+- Working on git repository for keycloak.
+
+
+
+
+
+
+EOD of 06-12-2022
+-----------------
+Project: Java Delivery
+
+- Updating keycloak doc.
+- Worked on OAuth custom claim validator.
+- Updated readme file of multi-realm project 
+
+EST : 8:00 Hours
+
+
+
+
+SOD of 07-12-2022
+-----------------
+Project: Java Delivery
+
+- Updating keycloak doc.
+- Updating project's readme files in git repository.
+
+
+
+
+EOD of 07-12-2022
+-----------------
+Project: Java Delivery
+
+- I have added below featuere in realm-management and admin-site project.
+	- added alert on successfully create and delete user.
+	- added confirmation popup on delete and redirection to other site.
+	- Added dropdown with dynamic values on user and realm delete page.
+	
+- Updated readme file of Keycloak server
+ 
+EST : 8:20 Hours
+
+
+
+
+
+SOD of 08-12-2022
+-----------------
+Project: Java Delivery
+
+- Updating keycloak doc.
+- Updating project's readme files in git repository.
+
+
+
+
+
+
+
+Project: Java Delivery
+-----------------------
+EOD of 08-12-2022
+
+- I have added project flow diagram and links in below task's readme files.
+	- Spring Boot with keyclaok. 
+	- Role based control.
+	- SSO with multiple application.
+	- Multi Tenant Dynamic Software
+
+SOD of 09-12-2022
+
+- Updating project's readme files in git repository.
+- Will verify the git flow with Senier and adjust the session accordingly.
+
+
+
+
+
+
+
+
+Project: Java Delivery
+Date : 12-12-2022
+-----------------
+
+- I had added project flow diagram and changed content in readme file of below projects.
+	- Application wise different roles of user.
+	- Multi Tenant Project
+
+- Today i am Updating project's readme files in git repository (if needed) and
+- If Utshav need any help then we wil help him and
+- We will plannig for multiple session of keyclaok.
+
+
+
+
+
+Project: Java Delivery
+Date : 13-12-2022
+-----------------
+
+- Yesterday, Worked on
+	- I Helped Utshav for doc and git flow.
+	- I assisted him whenever he got stuck on any topic and adjusted the readme file accordingly
+	- Changed gitingnore file in RBAC project and multi-tenant project.
+	- We planned a KeyClok demo session. 
+	- Link of planning sheet : https://docs.google.com/spreadsheets/d/1FdQhZhEVap0nKnUIQqzOeNYE-HGPmweKx6l87Ha0YiY/edit#gid=0
+	- Resolving field error of realm-management-system. 
+
+- Today, i am working on field error that occur in realm-management-system.
+- I will update project version and remove unnecessary code from projects. 
+
+Blocker : filed error
+
+
+
+
+
+
+
+
+
+Project: Java Delivery
+Date : 14-12-2022
+-----------------
+
+- Yesterday,I Worked on
+	- Resolved field error in realm-management-system.
+		- There was version problem.
+	- Dynamic login & logout button added in RBAC project.
+	- Extra step added in readme file of RBAC project.
+	- From SSO with multiple app removed all projects and added my project with atterective UI.  
+	- Removed dev and prod server and latest version added for keycloak server.
+
+- Today, I will start working on 
+	- SSO with multiple system.
+	- Application wise different roles.
+	- Multi tenant System.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

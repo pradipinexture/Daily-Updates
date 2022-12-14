@@ -1,0 +1,129 @@
+
+
+git config –-global user.name “Chavda Sandip” 	 
+git config –-global user.email chavdasandip2908@gmail.com
+
+New Project upload into github
+------------------------------
+git init
+git status
+git add <file name>
+git commit -m "commit message"
+git checkout -b <branch name> or git branch -m <branch-name>
+git remote add origin https://github.com/chavdasandip2908/Test-Repo.git
+git push origin feature-branch  or  git push -u origin feature-branch
+
+
+Code changes push into git branch on daily basis
+------------------------------------------------
+git status
+git diff or git diff <file-name>  
+git add <file name> or git add . (add all files)
+git commit -m "code changes commit message"
+git pull origin <branch-name> (Take pull from same branch where you  want to push the code)
+git push origin <branch-name>
+
+Push all local branches into remote repository
+----------------------------------------------
+git push --all origin
+git push origin : <branch-name> (delete branch from remote repository)
+
+
+Commit different way
+--------------------
+git commit -m "message"
+git commit -a -m “message” (first it will add all tracked files and then commit all changes)
+
+
+Different ways to use add command 
+---------------------------------
+git add
+git add --all
+git add *.txt
+git add docs/*.txt
+git add docs/
+git add “*.txt”
+
+Remove all changes since the last commit of the file
+----------------------------------------------------
+git checkout . (remove all changes)
+git checkout <file name>
+
+Undo staging of the file that was added in the staging area
+-----------------------------------------------------------
+git reset
+git reset head "<file name>"
+git reset --soft HEAD^ (ubantu) or git reset --soft HEAD~1 (windows) => commit back to staging git
+git reset --soft HEAD^(ubantu) or git reset --hard HEAD~1(windows) => undo one commit
+git reset --hard HEAD^^(ubantu) or git reset --hard HEAD~2(windows) (undo two commit)
+git reset <commit-id>
+git reset --hard <commit-id> (discards all history and goes back to the specified commit)
+
+
+Branch operation
+----------------
+git branch (get all local braches)
+git branch -r (list of remote branches)
+git branch <branch-name>
+git branch -d Testing (Delete current branch)
+git branch -D Testing (forcefully delete a branch without making commits)
+git branch -m <branch-name>  (it will delete current branch and create new branch)
+git tag (list of tag)
+git tag -a <branch-name> -m "tag message"
+git push –tags (push the tag into remote repository)
+
+
+git merge <branch-name>
+
+git remove rm (remove local directory)
+
+git clone https://github.com/chavdasandip2908/Test.git
+
+
+To fetch down any changes from global repository to current repository
+----------------------------------------------------------------------
+git fetch
+
+
+log
+---
+git log
+git log –follow [file]
+git show <commit-id> (show commit changes)
+
+
+Stash
+-----
+git stash list (get all stash list)
+git stash (code changes push into staging area.)
+git stash show <stash-id>
+git stash pop (get first stash)
+git stash apply <stash-index>
+git stash clear 
+
+git stash push <folder or file>  (add perticuler file or folder in stash)
+
+
+tag
+---
+git tag
+git tag -a v1.0.0
+
+
+git shortlog (how many person are work on project with commit)
+
+git rebase (Git rebase similar to the git merge command. It integrates two branches into a single branch with one exception. A git rebase command rewrites the commit history.)
+
+git bisect (The Git bisect command helps you to find bad commits.)
+----------
+git bisect start (To start the git bisect )
+git bisect good a123 (let git bisect know about a good commit)
+git bisect bad z123 (And let git bisect know about a bad commit)
+
+
+git blame <your_file_name> (determine who made the changes to a file)
+
+git clean (remove all the untracked files)
+
+git whatchanged (command does the same thing as git log but in a raw form)
+

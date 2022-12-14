@@ -1,0 +1,1327 @@
+# Click the Variables button, above, to create your own variables.
+GET ${exampleVariable1} // _search
+{
+  "query": {
+    "${exampleVariable2}": {} // match_all
+  }
+}
+
+PUT ilm-0001
+{
+  "aliases": {
+    "ilm": {
+      "is_write_index":true
+    }
+  }
+}
+
+POST person/_doc
+{
+  "name": "rajput" ,
+  "test":"hello"
+}
+
+GET person/_segments
+
+GET person/_search
+
+GET person/_ilm/explain
+
+GET person/_settings
+
+PUT ilm-0001/_doc/1
+{
+  "name": "Pradip"
+}
+
+PUT ilm-0001/_doc/2
+{
+  "name": "Yash"
+}
+
+PUT ilm-0001/_doc/3
+{
+  "name": "New"
+}
+
+PUT ilm-0001/_doc/4
+{
+  "name": "cold"
+}
+
+GET ilm-0001/_search
+{
+  "query": {
+    "match": {
+      "name": "New"
+    }
+  }
+}
+GET ilm-0001/_ilm/explain
+
+GET ilm-0001/_settings
+
+
+GET ilm-000002/_ilm/explain
+
+
+
+#---------------------
+PUT _ilm/policy/session_policy   
+{
+  "policy": {
+    "phases": {
+      "hot": {                                
+        "actions": {
+          "rollover": {
+            "max_primary_shard_size": "50GB", 
+            "max_age": "2m"
+          }
+        }
+      },
+      "warm": {
+        "min_age": "3m",
+        "actions": {
+          "set_priority": {
+            "priority": 50
+          }
+        }
+      },
+      "delete": {
+        "min_age": "4m",
+        "actions": {
+          "delete": {
+            "delete_searchable_snapshot": true
+          }
+        }
+      }
+    }
+  }
+}
+
+
+PUT _template/demo_template
+{
+  "order": 0,
+  "index_patterns": [
+    "demo-*"
+  ],
+  "settings": {
+      "number_of_shards": "1",
+      "number_of_replicas": "0",
+       "index.lifecycle.name": "udpdump_policy",
+       "index.lifecycle.rollover_alias": "demo"
+  }
+}
+
+
+# every month 1st date index create
+
+PUT udpdump-01
+{
+  "aliases": {
+    "udpdump": {
+      "is_write_index":true
+    }
+  }
+}
+
+GET udpdump-2022.10-1/_search
+
+GET udpdump-01/_ilm/explain
+
+PUT /_cluster/settings
+{
+  "transient": {
+    "indices.lifecycle.poll_interval": "10s"
+  }
+}
+
+GET _ilm/policy
+GET _alias/udpdump
+GET _cat/indices/udpdump-*?v
+POST udpdump-*/_refresh
+
+
+
+PUT _template/session_template
+{
+  "index_patterns": [
+    "session-*"
+  ],
+  "settings": {
+      "number_of_shards": "1",
+      "number_of_replicas": "0",
+       "index.lifecycle.name": "session_policy",
+       "index.lifecycle.rollover_alias": "session"
+  },
+  "mappings": {
+    "properties": {
+      "id": {
+        "type": "integer"
+      },
+      "name": {
+        "type": "text"
+      }
+    }
+  }
+}
+
+DELETE _template/session_template
+
+
+PUT /%3Csession-%7Bnow%2FM%7Byyyy.MM%7D%7D-1%3E
+{
+  "aliases": {
+    "session": {
+      "is_write_index":true
+    }
+  }
+}
+
+
+GET session-2022.10-1/_ilm/explain
+
+DELETE session-2022.10-1
+
+# For removing policy from index
+POST session-2022.10-1/_ilm/remove
+
+
+POST _ilm/start
+
+POST _ilm/stop
+
+GET _ilm/status
+
+PUT demo-01
+
+
+GET demo-01/_settings
+
+GET demo-01/_mapping
+
+GET demo-01/_ilm/explain
+
+PUT demo-01/_doc/1
+{
+  "id":1,
+  "name":"Sandip"
+}
+PUT demo-01/_doc/2
+{
+  "id":2,
+  "name":"Rakesh"
+}
+PUT demo-01/_doc/3
+{
+  "id":3,
+  "name":"Parth"
+}
+PUT demo-01/_doc/4
+{
+  "id":4,
+  "name":"Krunal"
+}
+PUT demo-01/_doc/5
+{
+  "id":5,
+  "name":"Test"
+}
+
+PUT demo-01/_doc/6
+{
+  "id":6,
+  "name":"read_only"
+}
+
+GET demo-01/_search
+
+GET demo-01
+
+
+
+
+
+
+
+
+PUT /%3Cproject-%7Bnow%2FM%7Byyyy.MM%7D%7D-1%3E
+{
+  "aliases": {
+    "project": {
+      "is_write_index":true
+    }
+  }
+}
+
+
+GET project-2022.10-1
+
+GET project-2022.10-1/_ilm/explain
+
+DELETE project-2022.10-1
+
+POST project-2022.10-1/_doc
+{
+  "id":1,
+  "name":"Pradip"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#--------------------------------------------------------------------------------------------------------------------
+
+# Put explicit mapping in index
+PUT /review
+{
+  "mappings": {
+    "properties": {
+      "name":{"type": "text"},
+      "mobile":{"type": "long"}
+    }
+  }
+}
+
+PUT review
+
+
+                      # coerce
+                      #---------
+
+# fields wise coerce
+PUT /review/_mapping
+{
+    "properties": {
+      "amount":{
+        "type": "float",
+        "coerce":"false" # Now amount field only take float values and give error in other data type.
+      }
+    }
+}
+PUT review/_doc/2
+{
+  "amount":22.22
+}
+GET review/_search
+
+DELETE review
+
+# Global coerce - it apply on all fields of the index
+PUT /review
+{
+    "mappings": {
+        "properties": {
+          "amount":{"type": "float"},
+          "product":{"type":"text"},
+          "quantity":{"type": "integer"}
+        }
+    }, 
+    "settings": {
+      "index.mapping.coerce":"false"
+    }
+}
+# Success 
+PUT review/_doc/2
+{
+  "amount":22.22,
+  "product":"Apple",
+  "quantity":2
+}
+# Gives error for amount fields
+PUT review/_doc/3
+{
+  "amount":"22.22",
+  "product":"Laptop",
+  "quantity":2
+}
+# Gives error for quantity fields 
+PUT review/_doc/3
+{
+  "amount":22.22,
+  "product":"Mobile",
+  "quantity":2.2
+}
+GET review/_search
+
+DELETE review
+
+
+                      # doc_values - it saves disk space because data structure not store in disk
+                      #-----------
+
+PUT /sales
+{
+    "mappings": {
+        "properties": {
+          "product":{"type":"text"},
+          "quantity":{"type": "integer","doc_values": false}
+        }
+    }
+}
+
+PUT sales/_doc/1
+{
+  "product":"Apple",
+  "quantity":2
+}
+
+GET sales/_search
+
+DELETE sales
+
+
+                      # norms parameter - used to relavance scoring and if disable then save disk space
+                      #-----------
+
+PUT /sales
+{
+    "mappings": {
+        "properties": {
+          "product":{"type":"text","norms": false}
+        }
+    }
+}
+
+PUT sales/_doc/1
+{
+  "product":"Apple"
+}
+
+GET sales/_search
+
+DELETE sales
+
+                    # index parameter - if we not wat to search on perticular field but still store. still part of _source
+                    #-----------
+
+PUT /sales
+{
+    "mappings": {
+        "properties": {
+          "product":{"type":"text"},
+          "desc":{"type": "text","index": false}
+        }
+    }
+}
+
+PUT sales/_doc/1
+{
+  "product":"Apple",
+  "desc":"This is apple"
+}
+
+PUT sales/_doc/2
+{
+  "product":"Banana",
+  "desc":"This is banana"
+}
+# Gives error
+GET sales/_search
+{
+  "query": {
+    "match": {
+      "desc": "This is apple"
+    }
+  }
+}
+
+DELETE sales
+
+
+                    # null_values parameter - null values not indexed and not searchable.
+                    #------------
+
+
+PUT /sales
+{
+    "mappings": {
+        "properties": {
+          "product":{"type":"keyword","null_value": "default_value"}
+        }
+    }
+}
+
+
+
+                    # copy_to parameter - two fields into one field.
+                    #------------
+
+PUT person 
+{
+  "mappings": {
+    "properties": {
+      "firstname":{"type": "text","copy_to": "fullname"},
+      "lastname":{"type": "text","copy_to": "fullname"},
+      "fullname":{"type": "text"}
+    }
+  }
+}
+
+POST person/_doc
+{
+  "firstname":"Pradip",
+  "lastname":"Chavda"
+}
+
+GET person/_search
+
+DELETE person
+
+
+
+                    # Update existing mapping - not possible, for update mapping reindex.
+                    #------------------------
+
+PUT /sales
+{
+    "mappings": {
+        "properties": {
+          "product":{"type":"integer"}
+        }
+    }
+}
+
+# Gives error
+PUT /sales/_mapping
+{
+    "properties": {
+      "product":{"type":"keyword","ignore_above": 10}
+    }
+}
+
+
+
+
+
+
+                    # Reindex documents with rendex API
+                    #----------------------------------
+
+
+PUT person 
+{
+  "mappings": {
+    "properties": {
+      "firstname":{"type": "text"},
+      "lastname":{"type": "text"}
+    }
+  }
+}
+POST person/_doc
+{
+  "firstname":"Pradip",
+  "lastname":"Chavda"
+}
+POST person/_doc
+{
+  "firstname":"Sandip",
+  "lastname":"Chavda"
+}
+POST person/_doc
+{
+  "firstname":"Rakesh",
+  "lastname":"Parmar"
+}
+GET person/_search
+
+# Now if we wants to firstname as keyword and reindex all documents into new index.
+PUT person_new
+{
+  "mappings": {
+    "properties": {
+      "firstname":{"type": "keyword"},
+      "lastname":{"type": "text"}
+    }
+  }
+}
+GET person_new/_mapping
+
+# Here new index has a 0 docs
+GET person_new/_search
+
+# write below query to reindex all docs to new index. 
+POST /_reindex
+{
+  "source": {
+    "index": "person"
+  },
+  "dest": {
+    "index": "person_new"
+  }
+}
+
+# reindex docs with query (reindex a docs that has lastname as Chavda)
+POST /_reindex
+{
+  "source": {
+    "index": "person",
+    "query": {
+      "match": {
+        "lastname": "Chavda"
+      }
+    }
+  },
+  "dest": {
+    "index": "person_new"
+  }
+}
+# Here new index has a 4 docs
+GET person_new/_search
+
+
+                    # Remove fields - not possible but done by reindex api
+                    #----------------------------------
+
+
+# write below query to reindex all docs to new index. 
+POST /_reindex
+{
+  "source": {
+    "index": "person",
+    "_source":["firstname"]
+  },
+  "dest": {
+    "index": "person_remove"
+  }
+}
+
+GET person_remove/_search
+
+DELETE person_remove
+
+
+
+
+                    # Changing field name - not possible but done by reindex api
+                    #----------------------------------
+
+
+# write below query to reindex all docs to new index. 
+POST /_reindex
+{
+  "source": {
+    "index": "person_remove"
+  },
+  "dest": {
+    "index": "person_rename"
+  },
+  "script": {
+    "source": """
+      ctx._source.name = ctx._source.remove("firstname");
+    """
+  }
+}
+GET person_rename/_search
+
+GET person_remove/_search
+
+DELETE person_remove
+
+
+
+
+
+                    # ignore by script
+                    #-----------------
+
+POST /_reindex
+{
+  "source": {
+    "index": "person"
+  },
+  "dest": {
+    "index": "person_without_pradip"
+  },
+  "script": {
+    "source": """
+      if(ctx._source.firstname == "Pradip"){
+        ctx.op= "noop";
+      }
+    """
+  }
+}
+GET person_without_pradip/_search
+
+
+                    # multi-fields mappings 
+                    #-----------------
+
+PUT multi_mapping
+{
+  "mappings": {
+    "properties": {
+      "name":{"type": "text"},
+      "mobiles": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword"
+          }
+        }
+      }
+    }
+  }
+}
+
+POST multi_mapping/_doc
+{
+  "name":"Pradip",
+  "mobiles":["mi","realme","oppo"]
+}
+
+POST multi_mapping/_doc
+{
+  "name":"Sandip",
+  "mobiles":["vivo","realme"]
+}
+
+GET multi_mapping/_search
+{
+  "query": {
+    "match": {
+      "mobiles": "vivo"
+    }
+  }
+}
+
+GET multi_mapping/_search
+{
+  "query": {
+    "term": {
+        "mobiles.keyword": "oppo"
+    }
+  }
+}
+
+
+                    # index template - specify settings and mappings. applied on index that matching pattern
+                    #-----------------
+# Create template
+PUT _template/first-template
+{
+  "index_patterns": ["first-*"],
+  "settings": {
+    "number_of_replicas": 2,
+    "number_of_shards": 3,
+    "index.mapping.coerce":false
+  }, 
+  "mappings": {
+    "properties": {
+      "name":{"type": "text"},
+      "mobile.name":{"type": "keyword"}
+    }
+  },
+  "aliases": {
+    "first":{}
+  }
+}
+
+# get template
+GET _template/first-template
+
+# delete template
+DELETE _template/first-template
+
+
+
+
+PUT first-02
+
+GET first-01/_ilm/explain
+
+GET first-02/_settings
+
+DELETE first-01
+
+
+
+                    # Dynamic mapping
+                    #-----------------
+
+
+POST dynamic/_doc
+{
+  "name":"Pradip"
+}
+
+GET dynamic
+
+
+                    # Dynamic mapping with explicit
+                    #-----------------
+
+PUT dynamic_with_explicit
+{
+  "mappings": {
+    "properties": {
+      "firstname":{"type": "text"}
+    }
+  }
+}
+GET dynamic_with_explicit/_mapping
+
+POST dynamic_with_explicit/_doc
+{
+  "firstname": "Pradip",
+  "lastname": "Chavda"
+}
+GET dynamic_with_explicit/_mapping
+
+DELETE dynamic_with_explicit
+
+
+                    # Configure Dynamic mapping (stop dynamic mapping)
+                    #-----------------
+
+PUT dynamic_false
+{
+  "mappings": {
+    "dynamic":false,
+    "properties": {
+      "firstname":{"type": "text"}
+    }
+  }
+}
+GET dynamic_false/_mapping
+
+POST dynamic_false/_doc
+{
+  "firstname": "Pradip",
+  "lastname": "Chavda"
+}
+GET dynamic_false/_mapping
+
+GET dynamic_false/_search
+
+DELETE dynamic_false
+
+# search not work still part of _source
+GET dynamic_false/_search
+{
+  "query": {
+    "match": {
+      "lastname": "Chavda"
+    }
+  }
+}
+
+
+    # With strict
+    
+
+PUT dynamic_strict
+{
+  "mappings": {
+    "dynamic":"strict",
+    "properties": {
+      "firstname":{"type": "text"}
+    }
+  }
+}
+GET dynamic_strict/_mapping
+
+# give error lastname is not allowed
+POST dynamic_strict/_doc
+{
+  "firstname": "Pradip",
+  "lastname": "Chavda"
+}
+
+
+
+
+
+
+                    # Dynamic template
+                    #-----------------
+
+PUT dynamic_template
+{
+  "mappings": {
+    "dynamic_templates": [
+      {
+        "integers": {
+          "match_mapping_type":"long",
+          "mapping":{
+            "type":"integer"
+          }
+        }
+      }
+    ]
+  }
+}
+
+POST dynamic_template/_doc
+{
+  "stock":123
+}
+
+GET dynamic_template
+
+DELETE dynate
+
+
+
+
+PUT dynamic_template
+{
+  "mappings": {
+    "dynamic_templates": [
+      {
+        "string_only_text": {
+          "match_mapping_type":"string",
+          "match":"text_*",
+          "unmatch":"*_keyword",
+          "mapping":{
+            "type":"text"
+          }
+        }
+      },
+      {
+        "dynamic_2": {
+            "match_mapping_type":"string",
+            "match":"*_keyword",
+            "mapping":{
+              "type":"keyword"
+            }
+        }
+      }
+    ]
+  }
+}
+
+
+POST dynamic_template/_doc
+{
+  "text_product":"THis is text data type",
+  "text_product_keyword":"This is keyword datatype."
+}
+
+GET dynamic_template
+
+
+
+
+                    # Steaming analyzer
+                    #-----------------
+
+
+PUT steam_test
+{
+  "mappings": {
+    "properties": {
+      "correct":{"type": "text","analyzer": "steamming_analyzer"}
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    # Search by request URI
+                    #-----------------
+
+GET /person/_search?q=firstname:Pradip AND lastname:Chavda
+
+GET /person/default/_search
+
+
+
+
+
+
+
+
+/*
+Introduction of query DSL
+-------------------------
+
+1. Leaf query
+2. Compound query
+ */
+
+
+
+GET person/_search
+{
+  "query": {
+    "match_all": {  }
+  }
+}
+
+
+
+
+
+                    # Search for term
+                    #-----------------
+
+# 1. Term query - it use internally analyzer so text convert into small case.
+
+# fail
+GET person/_search
+{
+  "query": {
+    "term": {
+      "firstname": {
+        "value": "Sandip"
+      }
+    }
+  }
+}
+# success
+GET person/_search
+{
+  "query": {
+    "term": {
+      "firstname": {
+        "value": "sandip"
+      }
+    }
+  }
+}
+
+# 2. Without term (match, matchall ....) - it search in both case
+
+# success 
+GET person/_search
+{
+  "query": {
+    "match": {
+      "firstname": "Sandip"
+    }
+  }
+}
+#success
+GET person/_search
+{
+  "query": {
+    "match": {
+      "firstname": "sandip"
+    }
+  }
+}
+
+
+
+
+
+
+                    # Multi search for term
+                    #-----------------
+
+GET person/_search
+{
+  "query": {
+    "terms": {
+      "firstname": [
+        "sandip",
+        "pradip"
+      ]
+    }
+  }
+}
+
+
+                    # Retrive documents by ids
+                    #-------------------------
+
+
+GET person/_search
+{
+  "query": {
+    "ids": {
+      "values": [
+        "cS52xoMBeDNliLBHWo5J",
+        "ci52xoMBeDNliLBHao4n"
+      ]
+    }
+  }
+}
+
+
+
+
+                    # Match documents with range
+                    #-------------------------
+
+GET person/_search
+GET per
+
+# With numberic values
+GET person/_search
+{
+  "query": {
+    "range": {
+      "salary": {
+        "gte": 30000,
+        "lte": 50000
+      }
+    }
+  }
+}
+
+# With date values
+GET person/_search
+{
+  "query": {
+    "range": {
+      "birthdate": {
+        "gte": 10,
+        "lte": 20
+      }
+    }
+  }
+}
+
+
+PUT /review/_mapping
+{
+  "properties":{
+    "created_at":{"type":"date", "format":"dd/mm/yyyy"},
+    "updated_at":{"type":"date", "format":"epoch_second"}
+  }
+}
+
+
+
+# Retrive mapping from index
+GET /review/_mapping
+
+
+
+
+GET person/_segments/
+
+
+
+POST test-segment/_doc 
+{
+  "name": "Other1"  
+}
+
+GET test-segment/_search
+
+GET test-segment/_segments
+
+GET test-segment/_settings
+
+
+
+
+                    # Matching documents with non null values
+                    #---------------------------------------
+
+GET person/_search
+
+GET person/_search
+{
+  "query": {
+    "exists": {
+      "field": "firstname"
+    }
+  }
+}
+
+
+
+                    # Matching baased on prefix
+                    #--------------------------
+
+
+GET person/_search
+{
+  "query": {
+    "prefix": {
+      "lastname": "chav"
+    }
+  }
+}
+
+GET person/_search
+
+
+
+
+                    # Searching with wildcards  (* -  n number of char) and (? - one char)
+                    #--------------------------
+
+GET person/_search
+{
+  "query": {
+    "wildcard": {
+      "firstname": {
+        "value": "*dip"
+      }
+    }
+  }
+}
+
+GET person/_search
+{
+  "query": {
+    "wildcard": {
+      "firstname": {
+        "value": "pr?dip"
+      }
+    }
+  }
+}
+
+
+
+
+                    # Searching with Regular expression
+                    #----------------------------------
+
+GET person/_search
+{
+  "query": {
+    "wildcard": {
+      "firstname": {
+        "value": "pr[a-zA-Z]+dip"
+      }
+    }
+  }
+}
+
+
+
+
+
+                    # Flexible matching with match query
+                    #-----------------------------------
+
+GET person/_search
+{
+  "query": {
+    "ids": {"values": ["ylJXzIMBRL_1Orxp3NKk"]}
+  }
+}
+
+PUT person/_doc/cS52xoMBeDNliLBHWo5J
+{
+          "firstname": "Rakesh",
+          "lastname": "Parmar",
+          "salary": "35000",
+          "birthdate": "2003/02/11",
+          "active": true,
+          "title":"hello rakesh is old.",
+          "Other":"other new hello"
+}
+// by default or operator in between words like (hello or new or is)
+GET person/_search
+{
+  "query": {
+    "match": {
+      "title": "hello new is"
+    }
+  }
+}
+
+// If we wants to use 'and' opearator then hit below query (and means all words present in given field)
+GET person/_search
+{
+  "query": {
+    "match": {
+      "title": {
+        "query": "hello new is",
+        "operator": "and"
+      }
+    }
+  }
+}
+
+GET person/_search
+
+
+
+
+                    # Matching phrases
+                    #-----------------
+// doc's title field contain given string and in given order 
+GET person/_search
+{
+  "query": {
+    "match_phrase": {
+      "title": "hello new is"
+    }
+  }
+}
+// order not maintain(then result will be null)
+GET person/_search
+{
+  "query": {
+    "match_phrase": {
+      "title": "hello is new"
+    }
+  }
+}
+
+                    # Searching multiple fields
+                    #--------------------------
+GET person/_search
+{
+  "query": {
+    "multi_match": {
+      "query": "hello",
+      "fields": ["title","Other"]
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

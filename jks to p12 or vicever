@@ -1,0 +1,5 @@
+keytool -importkeystore -srckeystore spotfire.p12 -srcstoretype pkcs12 -destkeystore spotfire_new.jks -deststoretype jks
+
+
+keytool -importkeystore -srckeystore <source keystore> -destkeystore <dest keystore.pfx -srcstoretype JKS - deststoretype PKCS12
+

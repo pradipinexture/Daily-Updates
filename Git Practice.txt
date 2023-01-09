@@ -1,3 +1,15 @@
+NEW PRACTICE : 
+--------------
+git config -l  (username and default branch)
+git merge --abort  ( abort a conflicting merge)
+git push --delete origin branch_name_here (remove a remote branch)
+git rebase branch_name_here (transfer completed work from one branch to another )
+git rebase -i master ( interactively using the -i flag. It will open the editor and present a set of commands you can use.)
+git push -f (force a push request)
+
+
+
+
 
 
 git config –-global user.name “Chavda Sandip” 	 
@@ -33,6 +45,15 @@ Commit different way
 --------------------
 git commit -m "message"
 git commit -a -m “message” (first it will add all tracked files and then commit all changes)
+git commit --amend (allows you to modify and add changes to the most recent commit)
+
+
+remote
+------
+git remote -v (see remote URLs)
+git add remote https://repo_here
+git remote show origin (get more info about a remote repo) 
+git remote update (get the contents of remote branches in Git without automatically merging)
 
 
 Different ways to use add command 
@@ -63,7 +84,7 @@ git reset --hard <commit-id> (discards all history and goes back to the specifie
 Branch operation
 ----------------
 git branch (get all local braches)
-git branch -r (list of remote branches)
+git branch -r (check remote branches that Git is tracking)
 git branch <branch-name>
 git branch -d Testing (Delete current branch)
 git branch -D Testing (forcefully delete a branch without making commits)
@@ -88,8 +109,13 @@ git fetch
 log
 ---
 git log
+git log -p (see your commit history including changes)
+git log --stat (see log stats )
 git log –follow [file]
+git log --graph --oneline (show the commit log as a graph)
+git log --graph --oneline --all ( show the commit log as a graph of all branches)
 git show <commit-id> (show commit changes)
+
 
 
 Stash
@@ -126,4 +152,14 @@ git blame <your_file_name> (determine who made the changes to a file)
 git clean (remove all the untracked files)
 
 git whatchanged (command does the same thing as git log but in a raw form)
+
+
+
+
+
+
+git config --global init.defaultBranch <name>  => 
+
+
+
 

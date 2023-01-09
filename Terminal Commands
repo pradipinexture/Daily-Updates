@@ -101,4 +101,115 @@ sudo chmod g+w /media/pradip/3e55691e-210e-4270-8c4c-7557f1512d05
 sudo chmod g+w /media/pradip/51315ab8-7d41-442c-b3be-a53e11671011
 
 
+
+
+
+
+
+
+
+
+
+
+Install Docker
+==============
+
+Official
+
+
+-> Download latest docker deb file from official site
+	https://docs.docker.com/desktop/install/ubuntu/
+
+-> Before installation we have to pass below command.
+	sudo apt remove docker-desktop
+	rm -r $HOME/.docker/desktop
+	sudo rm /usr/local/bin/com.docker.cli
+	sudo apt purge docker-desktop
+	sudo apt install gnome-terminal
+
+-> Install downloaded deb file using apt-get
+	sudo apt-get update
+ 	sudo apt-get install ./docker-desktop-4.15.0-amd64.deb 
+ 
+ -> Launch docker-desktop
+ 	systemctl --user start docker-desktop
+ 
+ -> Generate public key for creadential management of linux
+ 	gpg --generate-key
+ 
+ -> Pass generated public. 
+		pass init 02229BD94C1EB347216421AA06798A2288715813
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Second
+
+
+ 2000  curl
+ 2001  sudo apt-get remove jenkins
+ 2002  sudo apt-get auto-remove jenkins
+ 2003  sudo apt-get remove --purge jenkins
+ 2004  sudo apt-get install jenkins
+ 2005  sudo apt-get update
+ 2006  sudo apt-get install     ca-certificates     curl     gnupg     lsb-release
+ 2007  sudo mkdir -p /etc/apt/keyrings
+ 2008  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+ 2009  echo   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+ 2010  sudo apt-get update
+ 2011  sudo chmod a+r /etc/apt/keyrings/docker.gpg
+ 2012  sudo apt-get update
+ 2013  sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+ 2014  sudo docker run hello-world
+ 2015  docker run -it ubuntu bash
+ 2016  sudo docker images
+ 2017  sudo docker ps -a
+ 2018  sudo docker ps
+ 2019  docker --version
+ 2020  sudo apt install docker.io
+ 2021  sudo apt-get remove docker docker-engine docker.io
+ 2022  sudo apt-get update
+ 2023  sudo apt install docker.io
+ 2024  sudo snap install docker
+ 2025  docker --version
+ 2026  sudo docker run hello-world
+ 2027  sudo docker images
+ 2028  sudo docker ps -a
+ 2029  sudo docker ps
+ 2030  docker login
+ 2031  sudo chmod 666 /var/run/docker.sock
+ 2032  sudo usermod -aG docker ${USER}
+ 2033  sudo chmod 666 /var/run/docker.sock
+ 2034  sudo setfacl --modify user::rw /var/run/docker.sock
+ 2035  sudo newgroup docker
+ 2036  sudo chmod 666 /var/run/docker.sock
+ 2037  sudo usermod -aG docker ${USER}
+ 2038  docker permission for linux 
+ 2039  docker login
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  
